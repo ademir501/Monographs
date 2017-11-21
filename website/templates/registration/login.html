@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <style>
+        #message {
+            margin-left: 1%;
+            font-size: 130%;
+        }
+    </style>
+
+    {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
+    {% if next %}
+        {% if user.is_authenticated %}
+            <p id="message">Your account doesn't have access to this page. To proceed,
+                please login with an account that has access.</p>
+        {% else %}
+            <h1 id="message">Please login to continue.</h1>
+        {% endif %}
+    {% endif %}
+
+
+    <div class="mdl-cell mdl-cell--12-col" id="login_table">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <table class="mdl-data-table mdl-shadow--2dp table-responsive">
+                {{ form.as_table }}
+            </table>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit"
+                    style="margin-top: 10px;">Login
+            </button>
+            <input type="hidden" name="next" value="{{ next }}"/>
+        </form>
+    </div>
+
+
+{% endblock %}

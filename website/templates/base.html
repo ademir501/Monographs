@@ -52,6 +52,9 @@
 
             {% block content %}
             {% endblock %}
+            <footer style="position: absolute; bottom: 0; width: 100%">
+                <p align="center" style="font-size: xx-small;">Papelería Micky's Lista de monografías v2.0</p>
+            </footer>
         </div>
     </main>
 </div>
@@ -61,6 +64,8 @@
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="{% static 'website/js/monograph_data_table_script.js' %}"></script>
 
+
 {% block scripts %}{% endblock %}
 </body>
+
 </html>

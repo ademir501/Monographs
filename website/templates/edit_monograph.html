@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+<style>
+    #update{
+        width: 70%;
+    }
+</style>
+
 {% block content %}
-    <div class="mdl-cell mdl-cell--12-col">
-        <form id="update" action="" method="post">
+    <div id="update">
+        <form action="" method="post">
             {% csrf_token %}
             <table class="mdl-data-table mdl-shadow--2dp table-responsive">
                 {{ form }}

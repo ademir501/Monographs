@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views.generic import ListView, UpdateView
 
@@ -5,7 +6,7 @@ from website.forms import MonographForm
 from website.models import Monograph
 
 
-class MainView(ListView):
+class MainView(LoginRequiredMixin, ListView):
     template_name = 'monograph_list_template.html'
     model = Monograph
 
@@ -26,7 +27,7 @@ class NewMonographView(ListView):
         return context
 
 
-class UpdateMonographView(UpdateView):
+class UpdateMonographView(LoginRequiredMixin, UpdateView):
     model = Monograph
     form_class = MonographForm
     template_name = 'edit_monograph.html'
