@@ -21,7 +21,7 @@
         <tbody>
         {% for monograph in monographs %}
          <tr class="mdl-typography--text-center">
-            <td>{{ monograph.number }}</td>
+            <td><a href={% url 'edit_monograph' pk=monograph.number %}>{{ monograph.number }}</a></td>
             <td>{{ monograph.primary_name }}</td>
             <td>{{ monograph.secondary_name }}</td>
          </tr>
@@ -31,3 +31,8 @@
     </div>
 
 {% endblock content %}
+
+{% block scripts %}
+    <script>const SUCCESS = "{{ is_success }}";</script>
+    <script src="{% static 'website/js/update_success.js' %}"></script>
+{% endblock %}

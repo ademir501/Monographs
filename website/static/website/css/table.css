@@ -13,3 +13,8 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
+.table a
+{
+    display:block;
+    text-decoration:none;
+}
