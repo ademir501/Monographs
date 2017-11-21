@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $('#monograph_table').DataTable({
+        "lengthMenu": [ 15, 25, 50, 75, 100 ],
         "language": {
             "lengthMenu": "Mostrar _MENU_ monografías por página",
             "zeroRecords": "Nothing found - sorry",
