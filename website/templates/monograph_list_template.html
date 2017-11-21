@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'website/css/table.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+    <div style="width: 100%; overflow-x:auto;">
+    <table id="monograph_table" class="table">
+        <thead class="mdl-typography--text-center">
+        <tr>
+            <th>Número</th>
+            <th>Nombre</th>
+            <th>Nombre</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {% for monograph in monographs %}
+         <tr class="mdl-typography--text-center">
+            <td>{{ monograph.number }}</td>
+            <td>{{ monograph.primary_name }}</td>
+            <td>{{ monograph.secondary_name }}</td>
+         </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock content %}

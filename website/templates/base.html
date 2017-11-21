@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Lista de Monografías Papeleria Micky's{% endblock %}</title>
+    <link rel="icon" href="{% static 'website/images/micky.png' %}" type="image/png"/>
+    <link rel="shortcut icon" href="{% static 'website/images/micky.png' %}" type="image/png"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"/>
+    <link rel="stylesheet" href="{% static 'website/css/base.css' %}"/>
+    {% block stylesheets %}{% endblock %}
+</head>
+
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout-icon"></div>
+
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">{% block content-title %}Lista de Monografías{% endblock %}</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+            <nav class="mdl-navigation mdl-layout--large-screen-only">
+                <a class="mdl-navigation__link" href="{% url 'main_page' %}">Lista</a>
+                <a href="{% url 'new_monograph' %}" class="mdl-navigation__link">Nueva Monografía</a>
+{#                <a href="{% url 'logout' %}" class="mdl-navigation__link">Logout</a>#}
+            </nav>
+        </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Menu</span>
+        <nav class="mdl-navigation">
+            <a href="{% url 'new_monograph' %}" class="mdl-navigation__link">Agregar Monografía</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="mdl-grid">
+            <div id='loading'
+                 class="mdl-cell mdl-cell--12-col mdl-progress mdl-js-progress mdl-progress__indeterminate"
+                 style="display: none;"></div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+</div>
+
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="{% static 'website/js/monograph_data_table_script.js'  %}"></script>
+{% endblock %}
+</body>
+</html>
