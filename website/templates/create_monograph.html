@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-xs-12">
+        <div class="row">
+            <h2 class="subhead">Agregar Monografía</h2>
+        </div>
+        <form method="post" class="col-md-4" enctype="multipart/form-data" action={% url "new_monograph" %}>
+            {% csrf_token %}
+            <table class="mdl-data-table mdl-shadow--2dp table-responsive">
+                {{ form }}
+            </table>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg pull-right">Guardar </button>
+                <input type="submit" class="btn btn-danger btn-lg pull-left" name="Cancelar" value="Cancelar">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
