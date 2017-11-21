@@ -21,21 +21,22 @@ class MainView(ListView):
 class NewMonographView(CreateView):
     template_name = 'create_monograph.html'
     model = Monograph
-    form_class = Monograph
+    form_class = MonographForm
 
     def get_context_data(self, **kwargs):
         context = super(NewMonographView, self).get_context_data(**kwargs)
         return context
 
     def form_valid(self, form):
-        number = form.data['number']
-        primary_name = form.data['primary_name']
-        secondary_name = form.data['secondary_name']
-        try:
-            monograph = Monograph.objects.create(number=number, primary_name=primary_name, secondary_name=secondary_name)
-        except:
-            raise Http404
+        form.save()
+        return super(NewMonographView, self).form_valid(form)
+
+    def get_success_url(self):
         return reverse_lazy('main_page')
+
+    def post(self, request, *args, **kwargs):
+        if 'Cancelar' in request.POST:
+            return reverse_lazy('main_page')
 
 
 class UpdateMonographView(UpdateView):
