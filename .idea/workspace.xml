@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47ac4cef-b2cc-41b9-abd0-e3b127396337" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/website/static/website/css/base.css" afterPath="$PROJECT_DIR$/website/static/website/css/base.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -363,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511297750990</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First deployment.">
+      <created>1512427768764</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1512427768764</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -398,7 +404,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added create new monograph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added create new monograph" />
+    <MESSAGE value="First deployment." />
+    <option name="LAST_COMMIT_MESSAGE" value="First deployment." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
