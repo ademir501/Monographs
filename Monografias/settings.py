@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Monografías.urls'
+ROOT_URLCONF = 'Monografias.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Monografías.wsgi.application'
+WSGI_APPLICATION = 'Monografias.wsgi.application'
 
 
 # Database

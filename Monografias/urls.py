@@ -1,11 +1,11 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from Monografías import settings
+from Monografias import settings
 from website.views import MainView, NewMonographView, UpdateMonographView
 
 urlpatterns = [
-    url(r'^admin/$', admin.site.urls),
+    url(r'^admin/', admin.site.urls),
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^logout/', include('django.contrib.auth.urls'), name='logout',
         kwargs={'next_page': settings.LOGOUT_REDIRECT_URL}),
