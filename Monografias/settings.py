@@ -28,6 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 ON_HEROKU = os.environ.get('ON_HEROKU', False)
+
 if ON_HEROKU == 'False' or ON_HEROKU == False:
     SECRET_KEY = 'l%^8$nt^vi96v3l*&sr$z6q5*#ppph7dpi+3en+v#25j-qn#9='
 else:
@@ -140,6 +141,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
