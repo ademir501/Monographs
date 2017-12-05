@@ -1,0 +1,1 @@
+web: gunicorn Monographs.wsgi --log-file -
