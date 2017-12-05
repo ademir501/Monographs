@@ -1,0 +1,22 @@
+#monograph_table {
+    width: 100%;
+}
+
+#monograph_table tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #f5f5f5;}
+
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: x-large;
+}
+
+.table a
+{
+    display:block;
+    text-decoration:none;
+    color: black;
+}
