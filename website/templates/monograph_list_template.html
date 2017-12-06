@@ -22,8 +22,17 @@
         {% for monograph in monographs %}
          <tr class="mdl-typography--text-center">
             <td><a href={% url 'edit_monograph' pk=monograph.number %}>{{ monograph.number }}</a></td>
-            <td>{{ monograph.primary_name }}</td>
-            <td>{{ monograph.secondary_name }}</td>
+             {% if monograph.primary_name %}
+                <td>{{ monograph.primary_name }}</td>
+             {% else %}
+                <td></td>
+             {% endif %}
+
+            {% if monograph.secondary_name %}
+                <td>{{ monograph.secondary_name }}</td>
+            {% else %}
+                <td></td>
+            {% endif %}
          </tr>
         {% endfor %}
         </tbody>
