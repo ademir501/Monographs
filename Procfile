@@ -1,1 +1,1 @@
-web: gunicorn Monographs.wsgi --log-file -
+web: gunicorn Monografias.wsgi --log-file -

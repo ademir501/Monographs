@@ -29,7 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 ON_HEROKU = os.environ.get('ON_HEROKU', False)
 
-if ON_HEROKU == 'False' or ON_HEROKU == False:
+if ON_HEROKU == 'False' or ON_HEROKU is False:
     SECRET_KEY = 'l%^8$nt^vi96v3l*&sr$z6q5*#ppph7dpi+3en+v#25j-qn#9='
 else:
     SECRET_KEY = config('SECRET_KEY')
