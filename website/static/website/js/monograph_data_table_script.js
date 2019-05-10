@@ -17,7 +17,7 @@ $(document).ready(function(){
         }
     });
 
-     $('#myModal').on('shown.bs.modal', function () {
+     $('#exampleModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
 })
 
