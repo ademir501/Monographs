@@ -16,5 +16,5 @@ $(document).ready(function(){
              }
         }
     });
-    window.location.href = $("#start").attr("href");
+    window.location.href = $("#start").attr("rel");
 });
