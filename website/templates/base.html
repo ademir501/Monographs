@@ -26,12 +26,10 @@
             Feliz dia Mita!!
             <img src="http://i.telegraph.co.uk/multimedia/archive/02182/kitten_2182000b.jpg"/>
 
-            <a href="#" class="enter_link">Cerrar</a>
+            <a href="{% url 'main_page' %}" class="enter_link">Cerrar</a>
         </div>
 
-    $('.enter_link').click(function() {
-        $(this).parent().fadeOut(500);
-    });
+
 
         <div class="mdl-layout__header-row">
             <!-- Title -->
@@ -79,7 +77,11 @@
 <script src="{% static 'website/js/monograph_data_table_script.js' %}"></script>
 
 
-{% block scripts %}{% endblock %}
+{% block scripts %}
+     $('.enter_link').click(function() {
+        $(this).parent().fadeOut(500);
+    });
+{% endblock %}
 </body>
 
 </html>
