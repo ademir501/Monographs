@@ -16,6 +16,6 @@ $(document).ready(function(){
              }
         }
     });
-     alert("Felicidades Mamá!!!");
 
+    window.location.href = $("#mom").attr("href");
 });
