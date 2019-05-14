@@ -21,7 +21,7 @@
         <tbody>
         {% for monograph in monographs %}
          <tr class="mdl-typography--text-center">
-            <td><a href={% url 'edit_monograph' pk=monograph.number %}>{{ monograph.number }}</a></td>
+            <td><a href={% url 'edit_monograph' pk=monograph.pk %}>{{ monograph.number }}</a></td>
              {% if monograph.primary_name %}
                 <td>{{ monograph.primary_name }}</td>
              {% else %}
