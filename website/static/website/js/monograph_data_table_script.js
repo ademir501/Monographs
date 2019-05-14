@@ -16,5 +16,5 @@ $(document).ready(function(){
              }
         }
     });
-    $('#ex1').modal('show');
+    // $('#ex1').modal('show');
 });
